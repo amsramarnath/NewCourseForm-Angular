@@ -1,0 +1,20 @@
+<form>
+
+        <div class="input-group">
+            <input type="text" class="form-control" #topic>
+
+            <input type="button"  class = "btn btn-primary " value="Add" (click)="addTopic(topic)">
+        </div>
+    
+    <ul class="list-group">
+        <li 
+         *ngFor = "let topic of topics['controls']"
+         class="list-group-item">
+            {{ topic.value }}
+            <input type="button" (click) = "removeTopic(topic)" class = "btn btn-primary " style="float:right"  value="Remove">
+        </li>
+    </ul>
+
+
+</form>
+
